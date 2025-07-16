@@ -24,8 +24,8 @@ class Manager {
         this.employees = [];
     }
 
-    hireEmployee(employee) {
-        this.employees.push(employee);
+    hireEmployee(name) {
+        this.employees.push(new Employee(name));
 
     }
 
@@ -65,7 +65,7 @@ class Office {
     }
 
     startWorkDay() {
-        this.managers.forEach(manager => manager.askEmployeesToWork(this));    this.cleaners.forEach(cleaner => cleaner.clean());
+        this.managers.forEach(manager => manager.askEmployeesToWork(this));  
         this.cleaners.forEach(cleaner => cleaner.clean());
   }
 }
